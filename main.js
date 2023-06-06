@@ -9,7 +9,7 @@ const axios = require('axios');
 
 app.get('/', function (req, res) {
     if (!req.query.chgTicket) {
-        res.write('No change ticket provided');
+        res.send('No change ticket provided');
         console.log('No change ticket provided');
     } else {
         const apiUrl = 'https://change-ticket.apps.cac.pcf.manulife.com/api/getPendingApprovers/' + req.query.chgTicket;
